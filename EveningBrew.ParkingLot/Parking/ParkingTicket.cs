@@ -10,7 +10,8 @@ namespace EveningBrew.ParkingLot.Parking
         private bool status;
 
         // Following are the instances of their respective classes
-        private Vehicle.Vehicle vehicle;
+        public Vehicle.Vehicle Vehicle { get; set; }
+
         private Payment.Payment payment;
         private Entrance entrance;
         private Exit exitIns;

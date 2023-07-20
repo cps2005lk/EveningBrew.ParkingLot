@@ -3,7 +3,7 @@ namespace EveningBrew.ParkingLot.Parking
 {
     internal class Exit
     {
-        private int id;
+        public int Id { get; set; }
 
        public void ValidateTicket(ParkingTicket ticket)
        {

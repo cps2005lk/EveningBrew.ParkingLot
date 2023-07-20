@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using EveningBrew.ParkingLot.Parking;
 using EveningBrew.ParkingLot.ParkingSpot;
+using EveningBrew.ParkingLot.User;
 
 namespace EveningBrew.ParkingLot
 {
@@ -47,20 +48,26 @@ namespace EveningBrew.ParkingLot
 
         }
 
-        public bool AddEntrance(Entrance entrance)
+        public void AddEntrance(Entrance entrance)
         {
+           //Adding multiple entrance points to parking lot
+        }
+
+        public void AddExit(Exit exit)
+        {
+            //Adding multiple Exit points to parking lot
             throw new NotImplementedException();
         }
 
-        public bool AddExit(Exit exit)
-        {
-            throw new NotImplementedException();
-        }
 
-        // This function allows parking tickets to be available at multiple entrances
         public ParkingTicket GetParkingTicket(Vehicle.Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            var ticket = new ParkingTicket();
+            vehicle.AssignTicket(ticket);
+
+            // Assign a parking spot
+            // increase spot count
+            return ticket;
         }
 
         public bool IsFull(ParkingSpot.ParkingSpot type)

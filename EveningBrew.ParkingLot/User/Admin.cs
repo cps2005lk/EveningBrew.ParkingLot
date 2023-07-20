@@ -6,24 +6,27 @@ namespace EveningBrew.ParkingLot.User
     {
         public bool AddParkingSpot(ParkingSpot.ParkingSpot spot)
         {
-            // displayBoard here refers to an instance of the DisplayBoard class
+            
             throw new NotSupportedException();
         }
 
         public bool AddDisplayBoard(DisplayBoard displayBoard)
         {
-            // entrance here refers to an instance of the Entrance class
+            // displayBoard here refers to an instance of the DisplayBoard class
+          
             throw new NotSupportedException();
         }
 
         public bool AddEntrance(Entrance entrance)
         {
-            // exit here refers to an instance of the Exit class
+            // entrance here refers to an instance of the Entrance class
+            
             throw new NotSupportedException();
         }
 
         public bool AddExit(Exit exit)
         {
+            // exit here refers to an instance of the Exit class
             throw new NotImplementedException();
         }
 

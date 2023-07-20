@@ -2,12 +2,15 @@
 {
     internal class Entrance
     {
-        private int id;
+        public int Id { get; set; }
 
         // Member function
         public ParkingTicket GetTicket()
         {
-            throw new NotImplementedException();
+            //Generate ticket
+            //print Ticket
+
+            return new ParkingTicket();
         }
     }
 }

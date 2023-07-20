@@ -5,8 +5,8 @@ namespace EveningBrew.ParkingLot.Vehicle
     internal class Car : Vehicle
     {
         public override void AssignTicket(ParkingTicket ticket)
-        {
-            throw new NotImplementedException();
+        { 
+            ticket.Vehicle = this;
         }
     }
 }

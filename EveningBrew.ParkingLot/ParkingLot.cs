@@ -1,14 +1,23 @@
 ﻿#nullable disable
+using System.Runtime.CompilerServices;
 using EveningBrew.ParkingLot.Parking;
+using EveningBrew.ParkingLot.ParkingSpot;
 
 namespace EveningBrew.ParkingLot
 {
     internal class ParkingLot
     {
         private int id;
-        private string name;
-        private string address;
-        private ParkingRate parkingRate;
+        private string _name;
+        private string _address;
+        private ParkingRate _parkingRate;
+
+        List<Disabled> _disabledSpots = new List<Disabled>();
+        List<Large> _largeSpots = new List<Large>();
+        List<Compact> _compactSpots = new List<Compact>();
+        List<Motorcycle> _motorcycleSpots = new List<Motorcycle>();
+
+
 
         private Dictionary<string, Entrance> entrance;
         private Dictionary<string, Exit> exit;
@@ -57,6 +66,28 @@ namespace EveningBrew.ParkingLot
         public bool IsFull(ParkingSpot.ParkingSpot type)
         {
             throw new NotImplementedException();
+        }
+
+        public bool Add(ParkingSpot.ParkingSpot parkingSpot)
+        {
+            switch (parkingSpot)
+            {
+                case Disabled spot:
+                    _disabledSpots.Add(spot);
+                    break;
+
+                case  Large spot:
+                    _largeSpots.Add(spot);
+                    break;
+
+                case  Compact spot:
+                    _compactSpots.Add(spot);
+                    break;
+                case  Motorcycle spot:
+                    _motorcycleSpots.Add(spot);
+                    break;
+            }
+            return true;
         }
     }
 }
